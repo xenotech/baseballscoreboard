@@ -18,8 +18,6 @@ var BallCount=0;
 var OutCount=0;
 var PitchingCountTop=0;
 var PitchingCountBottom=0;
-var name
-var msg
 
 function ScoreMinusA(){
 	ScoreA =ScoreA -1
@@ -34,15 +32,7 @@ function ScorePlusA(){
 	if (ScoreA <0 ) {
 		ScoreA = 0;
 	}
-
-//	name = "ScoreA.txt"
-
-//	msg = "aaa"			
-
-	writeFile("ScoreA.txt", ScoreA)
-
 	document.getElementById("TeamAScore-text").innerHTML = ScoreA;
-
 }
 
 function ScoreMinusB(){
@@ -328,48 +318,3 @@ function BaseClear(){
 	Status1Ball=1;
 		Change1Ball()
 }
-
-
-
-function SaveFile(Name, Content {
-	
-	var blob = new Bolb([Contest],{ type: 'text
-
-
-
-function writeFile(name, msg){
-
-	if(name == "") return false;
-
-//	var defaultpath = "H:\hjp\방송관련\scoreboard\Type3"; // 기록하고자 하는 경로. ex) C:\\Program Files\\logs
-
-	var fileObject = new ActiveXObject("Scripting.FileSystemObject");
-
-	var fullpath = "\\" + name;
-
-//	var fullpath = defaultpath+"\\"+name;
-
- // 파일이 생성되어있지 않으면 새로 만들고 기록
-
-	if(!fileObject.FileExists(fullpath)){
-
-		var fWrite = fileObject.CreateTextFile(fullpath,false);
-
-		fWrite.write(msg);
-
-		fWrite.close();
-
-	}else{
-
-// 파일이 이미 생성되어 있으면 appending 모드로 파일 열고 기록
-
-		var fWrite = fileObject.OpenTextFile(fullpath, 8);
-
-		fWrite.write(msg);
-
-		fWrite.close();
-
-	}
-
-}
-
