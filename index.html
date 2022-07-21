@@ -1,0 +1,220 @@
+<html>
+<head>
+	<script type="text/javascript" src='./test.js'>
+	</script>
+	<!meta http-equiv="refresh" content="1">
+	<!meta Charset="euc-kr">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+</head>
+<style>
+	#Broadcaseter-text {
+	position: absolute;
+	font-weight: bold;
+	font-size: 70px;
+	color: White;
+	Top: 51px;
+	left: 80px;
+	text-align: center;
+}
+#TeamA-text {
+	position: absolute;
+	font-weight: bold;
+	font-size: 42px;
+	color: Black;
+	Top: 28px;
+	left: 90px;
+	text-align: center;
+}
+#TeamAScore-text {
+	position: absolute;
+	font-weight: bold;
+	font-size: 60px;
+	color: Black;
+	Top: 17px;
+	Left: 235px;
+	Width:50
+	text-align: center;  
+}
+#TeamB-text {
+	position: absolute;
+	font-weight: bold;
+	font-size: 42px;
+	color: Black;
+	Top: 98px;
+	left: 90px;
+	text-align: center;
+}
+#TeamBScore-text {
+	position: absolute;
+	font-weight: bold;
+	font-size: 60px;
+	color: Black;
+	Top: 85px;
+	left: 235px;
+	text-align: center;
+}
+#Base1B {
+	position: absolute;
+	top: 70px;
+	left: 424px;
+}
+#Base2B {
+	position: absolute;
+	top: 40px;
+	left: 458px;
+}
+#Base3B {
+	position: absolute;
+	top: 70px;
+	left: 492px;
+}
+
+#InningTop {
+	position: absolute;
+	top: 25px;
+	left: 26px;	
+}
+#InningBottom {
+	position: absolute;
+	top: 115px;
+	left: 26px;
+}
+#InningCount-text {
+	position: absolute;
+	font-weight: bold;
+	font-size: 50px;
+	color: Black;
+	Top: 55px;
+	left: 33px;
+	text-align: center;
+}
+#InningUnit-text {
+	position: absolute;
+	font-weight: bold;
+	font-size: 55px;
+	color: White;
+	Top: 195px;
+	left: 173px;
+	text-align: center;
+}
+#InningTopBottom-text {
+	position: absolute;
+	font-weight: bold;
+	font-size: 	55px;
+	color: White;
+	Top: 199px;
+	left: 230px;
+	text-align: center;
+}
+#Ball1-Image {
+	position: absolute;
+	top: 40px;
+	left: 329px;
+}
+#Ball2-Image {
+	position: absolute;
+	top: 40px;
+	left: 358px;
+}
+#Ball3-Image {
+	position: absolute;
+	top: 40px;
+	left: 387px;
+}
+#Strike1-Image {
+	position: absolute;
+	top: 77px;
+	left: 329px;
+}
+#Strike2-Image {
+	position: absolute;
+	top: 77px;
+	left: 358px;
+}
+#Out1-Image {
+	position: absolute;
+	top: 112px;
+	left: 329px;
+}
+#Out2-Image {
+	position: absolute;
+	top: 112px;
+	left: 358px;
+}
+#PitchesDisplay-text {
+	position: absolute;
+	font-weight: bold;
+	font-size: 55px;
+	color: Black;
+	Top: 198px;
+	left: 830px;
+	text-align: center;
+}
+#Pitches-text {
+	position: absolute;
+	font-weight: bold;
+	font-size: 40px;
+	color: Black;
+	Top: 109px;
+	left: 490px;
+	text-align: center;
+}
+
+#GameStart-text {
+	position: absolute;
+	font-weight: Italic;
+	font-size: 30px;
+	color: rgba(255,255,255,0);
+	Top: 166px;
+	left: 30px;
+	text-align: center;
+}
+#CountClear-text {
+	position: absolute;
+	font-weight: Italic;
+	font-size: 30px;
+	color: rgba(255,255,255,0);
+	Top: 166px;
+	left: 310px;
+	text-align: center;
+}
+#BaseClear-text {
+	position: absolute;
+	font-weight: Italic;
+	font-size: 30px;
+	color: rgba(255,255,255,0);
+	Top: 166px;
+	left: 440px;
+	text-align: center;
+}
+</style>
+<body>
+	<div id="TeamA-text"; onclick="ScoreMinusA();"> 경민</div>
+	<div id="TeamAScore-text"; align="center"; onclick="ScorePlusA();">0</div>
+	<div id="TeamB-text"; onclick="ScoreMinusB();"> 화성</div>
+	<div id="TeamBScore-text"; onclick="ScorePlusB();">0</div>
+	<div id="InningCount-text"; onclick="InningMinus();">1</div> 
+	<div id="Pitches-text"; onclick="Nextinning();">0</div> 
+
+	<img src="./ScoreBoardBase2.png"/>
+	<img id="InningTop" src="./InningTop.png" width=7% height=14% onClick="InningChange();"/>
+	<img id="InningBottom" src="./InningBottom.png" width=7% height=14%   onClick="InningChange();"/>
+
+	<img id="Ball1-Image" src="./Blank.png" width=4.4% height=10.5% onClick="Change1Ball()"/>
+	<img id="Ball2-Image" src="./Blank.png" width=4.4% height=10.5% onClick="Change2Ball()"/>
+	<img id="Ball3-Image" src="./Blank.png" width=4.4% height=10.5% onClick="Change3Ball()"/>
+	<img id="Strike1-Image" src="./Blank.png" width=4.4% height=10.5% onClick="Change1Strike()"/>
+	<img id="Strike2-Image" src="./Blank.png" width=4.4% height=10.5% onClick="Change2Strike()"/>
+	<img id="Out1-Image" src="./Blank.png" width=4.4% height=10.5% onClick="Change1Out()"/>
+	<img id="Out2-Image" src="./Blank.png" width=4.4% height=10.5% onClick="Change2Out()"/>
+
+	<img id="Base1B" src="./EmptyBase.png" width=10% height=17% onClick="Change1B();"/>
+	<img id="Base2B" src="./EmptyBase.png" width=10% height=17% onClick="Change2B();"/>
+	<img id="Base3B" src="./EmptyBase.png" width=10% height=17% onClick="Change3B();"/>
+
+	<div id="GameStart-text"; onclick="GameStart();">Game Start</div> 
+	<div id="CountClear-text"; onclick="CountClear();">Clear</div> 
+	<div id="Baseclear-text"; onclick="BaseClear();">Clear</div> 
+
+</body>
+</html>
