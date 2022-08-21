@@ -7,91 +7,231 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
 </head>
 <style>
-	#Broadcaseter-text {
+#Broadcaseter-text {
 	position: absolute;
 	font-weight: bold;
 	font-size: 70px;
 	color: White;
-	Top: 51px;
+	Top: 46px;
 	left: 80px;
 	text-align: center;
+	user-select: none;
+}
+#GameName-text {
+	position: absolute;
+	font-weight: bold;
+	font-size: 49px;
+	color: MidnightBlue;
+	Top: 16px;
+	left: 61px;
+	Width: 500px;
+	Height: 88px;
+!	border: 3px solid green;
+	display: flex;
+	justify-content: Left;
+	align-items: center;
+	user-select: none;
+}
+#GamePlace-text {
+	position: absolute;
+	font-weight: bold;
+	font-size: 41px;
+	color: MidnightBlue;
+	Top: 16px;
+	left: 510px;
+	Width: 290px;
+	Height: 88px;
+!	border: 3px solid green;
+	display: flex;
+	justify-content: right;
+	align-items: center;
+	user-select: none;
+}
+#BatterIndex-text {
+	position: absolute;
+	font-weight: bold;
+	font-size: 41px;
+	color: White;
+	Top: 110px;
+	left: 17px;
+	Width: 60px;
+	Height: 88px;
+!	border: 3px solid green;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+}
+#BatterName-text {
+	position: absolute;
+	font-weight: bold;
+	font-size: 41px;
+	color: White;
+	Top: 110px;
+	left: 80px;
+	Width: 300px;
+	Height: 88px;
+!	border: 3px solid green;
+	display: flex;
+	justify-content: Left;
+	align-items: center;
+	user-select: none;
+}
+#BatterBacknumber-text {
+	position: absolute;
+	font-weight: bold;
+	font-size: 69px;
+	color: lightgray;
+	Top: 16px;
+	left: 17px;
+	Width: 550px;
+	Height: 88px;
+!	border: 3px solid green;
+	display: flex;
+	justify-content: Left;
+	align-items: center;
+	user-select: none;
+}
+#PitcherIndex-text {
+	position: absolute;
+	font-weight: bold;
+	font-size: 41px;
+	color: White;
+	Top: 110px;
+	left: 420px;
+	Width: 60px;
+	Height: 88px;
+!	border: 3px solid green;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+}
+#PitcherName-text {
+	position: absolute;
+	font-weight: bold;
+	font-size: 41px;
+	color: White;
+	Top: 110px;
+	left: 480px;
+	Width: 300px;
+	Height: 88px;
+!	border: 3px solid green;
+	display: flex;
+	justify-content: Left;
+	align-items: center;
+	user-select: none;
 }
 #TeamA-text {
 	position: absolute;
 	font-weight: bold;
-	font-size: 42px;
-	color: Black;
-	Top: 28px;
-	left: 90px;
-	text-align: center;
+	font-size: 57px;
+	color: lightgray;
+	Top: 205px;
+	left: 17px;
+	Width: 280px;
+	Height: 108px;
+!	border: 3px solid green;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
 }
 #TeamAScore-text {
 	position: absolute;
 	font-weight: bold;
-	font-size: 60px;
-	color: Black;
-	Top: 17px;
-	Left: 235px;
-	Width:50
-	text-align: center;  
+	font-size: 64px;
+	color: darkgray;
+	Top: 205px;
+	left: 300px;
+	Width: 127px;
+	Height: 108px;
+!	border: 3px solid green;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
 }
 #TeamB-text {
 	position: absolute;
 	font-weight: bold;
-	font-size: 42px;
-	color: Black;
-	Top: 98px;
-	left: 90px;
-	text-align: center;
+	font-size: 57px;
+	color: lightgray;
+	Top: 317px;
+	left: 17px;
+	Width: 280px;
+	Height: 108px;
+!	border: 3px solid green;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
 }
 #TeamBScore-text {
 	position: absolute;
 	font-weight: bold;
-	font-size: 60px;
-	color: Black;
-	Top: 85px;
-	left: 235px;
-	text-align: center;
+	font-size: 64px;
+	color: darkgray;
+	Top: 317px;
+	left: 300px;
+	Width: 127px;
+	Height: 108px;
+!	border: 3px solid green;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+}
+#MainBoard {
+	position: absolute;
+	top: 0px;
+	left: 0px;
 }
 #Base1B {
 	position: absolute;
-	top: 70px;
-	left: 424px;
+	top: 255px;
+	left: 545px;
 }
 #Base2B {
 	position: absolute;
-	top: 40px;
-	left: 458px;
+	top: 220px;
+	left: 495px;
 }
 #Base3B {
 	position: absolute;
-	top: 70px;
-	left: 492px;
+	top: 255px;
+	left: 445px;
 }
 
 #InningTop {
 	position: absolute;
-	top: 25px;
-	left: 26px;	
+	top: 355px;
+	left: 475px;	
 }
 #InningBottom {
 	position: absolute;
-	top: 115px;
-	left: 26px;
+	top: 355px;
+	left: 475px;
 }
 #InningCount-text {
 	position: absolute;
 	font-weight: bold;
-	font-size: 50px;
-	color: Black;
-	Top: 55px;
-	left: 33px;
-	text-align: center;
+	font-size: 45px;
+	color: white;
+	Top: 335px;
+	left: 540px;
+	Width: 50px;
+	Height: 70px;
+!	border: 3px solid green;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
 }
 #InningUnit-text {
 	position: absolute;
 	font-weight: bold;
-	font-size: 55px;
+	font-size: 41px;
 	color: White;
 	Top: 195px;
 	left: 173px;
@@ -100,7 +240,7 @@
 #InningTopBottom-text {
 	position: absolute;
 	font-weight: bold;
-	font-size: 	55px;
+	font-size: 	45px;
 	color: White;
 	Top: 199px;
 	left: 230px;
@@ -108,62 +248,69 @@
 }
 #Ball1-Image {
 	position: absolute;
-	top: 40px;
-	left: 329px;
+	top: 235px;
+	left: 690px;
 }
 #Ball2-Image {
 	position: absolute;
-	top: 40px;
-	left: 358px;
+	top: 235px;
+	left: 736px;
 }
 #Ball3-Image {
 	position: absolute;
-	top: 40px;
-	left: 387px;
+	top: 235px;
+	left: 782px;
 }
 #Strike1-Image {
 	position: absolute;
-	top: 77px;
-	left: 329px;
+	top: 303px;
+	left: 713px;
 }
 #Strike2-Image {
 	position: absolute;
-	top: 77px;
-	left: 358px;
+	top: 303px;
+	left: 759px;
 }
 #Out1-Image {
 	position: absolute;
-	top: 112px;
-	left: 329px;
+	top: 369px;
+	left: 713px;
 }
 #Out2-Image {
 	position: absolute;
-	top: 112px;
-	left: 358px;
+	top: 369px;
+	left: 759px;
 }
 #PitchesDisplay-text {
 	position: absolute;
 	font-weight: bold;
-	font-size: 55px;
+	font-size: 41px;
 	color: Black;
 	Top: 198px;
 	left: 830px;
 	text-align: center;
+	user-select: none;
 }
 #Pitches-text {
 	position: absolute;
 	font-weight: bold;
-	font-size: 40px;
-	color: Black;
-	Top: 109px;
-	left: 490px;
-	text-align: center;
+	font-size: 30px;
+	color: White;
+	Top: 115px;
+	left: 700px;
+	Width: 135px;
+	Height: 88px;
+!	border: 3px solid green;
+	display: flex;
+	justify-content: right;
+	align-items: center;
+	user-select: none;
 }
 
 #GameStart-text {
 	position: absolute;
 	font-weight: Italic;
-	font-size: 30px;
+	font-size: 25px;
 	color: rgba(255,255,255,0);
 	Top: 166px;
 	left: 30px;
@@ -172,7 +319,7 @@
 #CountClear-text {
 	position: absolute;
 	font-weight: Italic;
-	font-size: 30px;
+	font-size: 25px;
 	color: rgba(255,255,255,0);
 	Top: 166px;
 	left: 310px;
@@ -181,7 +328,7 @@
 #BaseClear-text {
 	position: absolute;
 	font-weight: Italic;
-	font-size: 30px;
+	font-size: 25px;
 	color: rgba(255,255,255,0);
 	Top: 166px;
 	left: 440px;
@@ -189,32 +336,44 @@
 }
 </style>
 <body>
-	<div id="TeamA-text"; onclick="ScoreMinusA();"> 동인천</div>
+	<img id="MainBoard" src="./ScoreBoardBase_away.png"width=865 height=448/>
+
+	<div id="GameName-text"; onclick="ChangebatterMinus();">i-League U16</div>
+	<div id="GamePlace-text"; onclick="Lastbatter();">화성드림</div>
+
+	<div id="BatterIndex-text"; onclick="Nextbatter();">1</div>
+	<div id="BatterName-text"; onclick="ChangebatterPlus();">타자이름</div>
+
+	<div id="PitcherIndex-text"; onclick="ChangePitcherMinus();">P</div>
+	<div id="PitcherName-text"; onclick="ChangePitcherPlus();">투수이름</div>
+
+	<div id="TeamA-text"; onclick="ScoreMinusA();">화성BC</div>
 	<div id="TeamAScore-text"; align="center"; onclick="ScorePlusA();">0</div>
-	<div id="TeamB-text"; onclick="ScoreMinusB();"> 화성</div>
+
+	<div id="TeamB-text"; onclick="ScoreMinusB();">김포BC</div>
 	<div id="TeamBScore-text"; onclick="ScorePlusB();">0</div>
+
 	<div id="InningCount-text"; onclick="InningMinus();">1</div> 
-	<div id="Pitches-text"; onclick="Nextinning();">0</div> 
+	<div id="Pitches-text"; onclick="CountClear();">0</div> 
 
-	<img src="./ScoreBoardBase2.png"/>
-	<img id="InningTop" src="./InningTop.png" width=7% height=14% onClick="InningChange();"/>
-	<img id="InningBottom" src="./InningBottom.png" width=7% height=14%   onClick="InningChange();"/>
+	<img id="InningTop" src="./InningTop.png" width=60 height=40 onClick="InningChange();"/>
+	<img id="InningBottom" src="./InningBottom.png" width=60 height=40 onClick="InningChange();"/>
 
-	<img id="Ball1-Image" src="./Blank.png" width=4.4% height=10.5% onClick="Change1Ball()"/>
-	<img id="Ball2-Image" src="./Blank.png" width=4.4% height=10.5% onClick="Change2Ball()"/>
-	<img id="Ball3-Image" src="./Blank.png" width=4.4% height=10.5% onClick="Change3Ball()"/>
-	<img id="Strike1-Image" src="./Blank.png" width=4.4% height=10.5% onClick="Change1Strike()"/>
-	<img id="Strike2-Image" src="./Blank.png" width=4.4% height=10.5% onClick="Change2Strike()"/>
-	<img id="Out1-Image" src="./Blank.png" width=4.4% height=10.5% onClick="Change1Out()"/>
-	<img id="Out2-Image" src="./Blank.png" width=4.4% height=10.5% onClick="Change2Out()"/>
+	<img id="Ball1-Image" src="./Blank.png" width=40 height=40 onClick="Change1Ball()"/>
+	<img id="Ball2-Image" src="./Blank.png" width=40 height=40 onClick="Change2Ball()"/>
+	<img id="Ball3-Image" src="./Blank.png" width=40 height=40 onClick="Change3Ball()"/>
+	<img id="Strike1-Image" src="./Blank.png" width=40 height=40 onClick="Change1Strike()"/>
+	<img id="Strike2-Image" src="./Blank.png" width=40 height=40 onClick="Change2Strike()"/>
+	<img id="Out1-Image" src="./Blank.png" width=40 height=40 onClick="Change1Out()"/>
+	<img id="Out2-Image" src="./Blank.png" width=40 height=40 onClick="Change2Out()"/>
 
-	<img id="Base1B" src="./EmptyBase.png" width=10% height=17% onClick="Change1B();"/>
-	<img id="Base2B" src="./EmptyBase.png" width=10% height=17% onClick="Change2B();"/>
-	<img id="Base3B" src="./EmptyBase.png" width=10% height=17% onClick="Change3B();"/>
+	<img id="Base1B" src="./EmptyBase.png" width=86 height=60 onClick="Change1B();"/>
+	<img id="Base2B" src="./EmptyBase.png" width=86 height=60 onClick="Change2B();"/>
+	<img id="Base3B" src="./EmptyBase.png" width=86 height=60 onClick="Change3B();"/>
 
-	<div id="GameStart-text"; onclick="GameStart();">Game Start</div> 
-	<div id="CountClear-text"; onclick="CountClear();">Clear</div> 
-	<div id="Baseclear-text"; onclick="BaseClear();">Clear</div> 
+	<!--<div id="GameStart-text"; onclick="GameStart();">Game Start</div> -->
+	<!--<div id="CountClear-text"; onclick="CountClear();">Clear</div> -->
+	<!--<div id="Baseclear-text"; onclick="BaseClear();">Clear</div> -->
 
 </body>
 </html>

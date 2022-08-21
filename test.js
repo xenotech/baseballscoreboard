@@ -18,6 +18,23 @@ var BallCount=0;
 var OutCount=0;
 var PitchingCountTop=0;
 var PitchingCountBottom=0;
+var PlayerInfoIndex=0;
+var BatterIndexTop=0;
+var BatterIndexBottom=0;
+var PitcherIndexTop=1;
+var PitcherIndexBottom=1;
+var LineupTop=[];
+var LineupBottom=[];
+var PlayerName=[];
+
+LineupBottom = [0,17,18,19,20,21,22,23,24,25];
+PitcherIndexBottom = 17;
+
+LineupTop = [0,3,6,2,1,4,5,6,7,8,2];
+PitcherIndexTop = 12;
+
+PlayerName = ["Null","채시훈[17]","신희주[11]","나건우[9]","최재원[12]","박종현[10]","이현서[14]","한재준[7]","홍승완[13]","조규민[3]","손영빈[22]","장성환[15]","배준석[16]","이시헌[18]","김병철[19]","김상현[20]","김태완[21]","선수1","선수2","선수3","선수4","선수5","선수6","선수7","선수8","선수9","선수10","선수11","선수12","선수13","선수14","선수15","선수16","선수17","선수18"];
+
 
 function ScoreMinusA(){
 	ScoreA =ScoreA -1
@@ -270,6 +287,8 @@ function Nextinning(){
 		Change1Out()
 	Status2Out=1;
 		Change2Out()
+		Nextbatter()
+		ChangeinningPitcher()
 }
 function GameStart(){
 	Status1B=1;
@@ -317,4 +336,121 @@ function BaseClear(){
 		Change3B()
 	Status1Ball=1;
 		Change1Ball()
+}
+function Nextbatter(){
+	if (InningTopBottom=="초") {
+		CountClear()
+		BatterIndexTop=BatterIndexTop+1
+		if (BatterIndexTop > 9 ) {
+			BatterIndexTop=1
+		}
+		document.getElementById("BatterIndex-text").innerHTML=BatterIndexTop
+		document.getElementById("BatterName-text").innerHTML=PlayerName[LineupTop[BatterIndexTop]]
+	} else {
+		CountClear()
+		BatterIndexBottom = BatterIndexBottom+1
+		if (BatterIndexBottom > 9 ) {
+			BatterIndexBottom= 1;
+		}
+		document.getElementById("BatterIndex-text").innerHTML=BatterIndexBottom
+		document.getElementById("BatterName-text").innerHTML=PlayerName[LineupBottom[BatterIndexBottom]]
+	}
+}
+function Lastbatter(){
+	if (InningTopBottom=="초") {
+		CountClear()
+		BatterIndexTop=BatterIndexTop-1
+		if (BatterIndexTop < 1 ) {
+			BatterIndexTop=9
+		}
+		document.getElementById("BatterIndex-text").innerHTML=BatterIndexTop
+		document.getElementById("BatterName-text").innerHTML=PlayerName[LineupTop[BatterIndexTop]]
+	} else {
+		CountClear()
+		BatterIndexBottom = BatterIndexBottom-1
+		if (BatterIndexBottom < 1 ) {
+			BatterIndexBottom= 9;
+		}
+		document.getElementById("BatterIndex-text").innerHTML=BatterIndexBottom
+		document.getElementById("BatterName-text").innerHTML=PlayerName[LineupBottom[BatterIndexBottom]]
+	}
+}
+function ChangeinningPitcher(){
+	if (InningTopBottom=="초") {
+		document.getElementById("PitcherName-text").innerHTML=PlayerName[PitcherIndexTop]
+		document.getElementById("Pitches-text").innerHTML=PitchingCountTop
+	} else {
+		document.getElementById("PitcherName-text").innerHTML=PlayerName[PitcherIndexBottom]
+		document.getElementById("Pitches-text").innerHTML=PitchingCountBottom
+	}
+}
+function ChangebatterPlus(){
+	if (InningTopBottom=="초") {
+		LineupTop[BatterIndexTop]=LineupTop[BatterIndexTop]+1
+		if (LineupTop[BatterIndexTop] > 26 ) {
+			LineupTop[BatterIndexTop]=1
+		}
+
+		document.getElementById("BatterName-text").innerHTML=PlayerName[LineupTop[BatterIndexTop]]
+	} else {
+		LineupBottom[BatterIndexBottom]=LineupBottom[BatterIndexBottom]+1
+		if (LineupBottom[BatterIndexBottom] > 26 ) {
+			LineupBottom[BatterIndexBottom]=1
+		}
+		document.getElementById("BatterName-text").innerHTML=PlayerName[LineupBottom[BatterIndexBottom]]
+	}
+}
+function ChangebatterMinus(){
+	if (InningTopBottom=="초") {
+		LineupTop[BatterIndexTop]=LineupTop[BatterIndexTop]-1
+		if (LineupTop[BatterIndexTop] < 1 ) {
+			LineupTop[BatterIndexTop]=25
+		}
+		document.getElementById("BatterName-text").innerHTML=PlayerName[LineupTop[BatterIndexTop]]
+	} else {
+		LineupBottom[BatterIndexBottom]=LineupBottom[BatterIndexBottom]-1
+		if (LineupBottom[BatterIndexBottom] < 1 ) {
+			LineupBottom[BatterIndexBottom]=25
+		}
+
+		document.getElementById("BatterName-text").innerHTML=PlayerName[LineupBottom[BatterIndexBottom]]
+	}
+}
+function ChangePitcherPlus(){
+	if (InningTopBottom=="초") {
+		PitcherIndexTop=PitcherIndexTop+1
+		if (PitcherIndexTop > 26 ) {
+			PitcherIndexTop=1
+		}		
+		document.getElementById("PitcherName-text").innerHTML=PlayerName[PitcherIndexTop]
+		PitchingCountTop=0
+		document.getElementById("Pitches-text").innerHTML=PitchingCountTop
+	} else {
+		PitcherIndexBottom=PitcherIndexBottom+1
+		if (PitcherIndexBottom > 26 ) {
+			PitcherIndexBottom=1
+		}
+		document.getElementById("PitcherName-text").innerHTML=PlayerName[PitcherIndexBottom]
+		PitchingCountBottom=0
+		document.getElementById("Pitches-text").innerHTML=PitchingCountBottom
+	}
+}
+function ChangePitcherMinus(){
+	if (InningTopBottom=="초") {
+		PitcherIndexTop=PitcherIndexTop-1
+		if (PitcherIndexTop < 1 ) {
+			PitcherIndexTop=25
+		}
+		document.getElementById("PitcherName-text").innerHTML=PlayerName[PitcherIndexTop]
+		PitchingCountTop=0
+		document.getElementById("Pitches-text").innerHTML=PitchingCountTop
+	} else {
+		PitcherIndexBottom=PitcherIndexBottom-1
+		if (PitcherIndexBottom < 1 ) {
+			PitcherIndexBottom=25
+		}
+		document.getElementById("PitcherName-text").innerHTML=PlayerName[PitcherIndexBottom]
+		PitchingCountBottom=0
+		document.getElementById("Pitches-text").innerHTML=PitchingCountBottom
+	}
 }
