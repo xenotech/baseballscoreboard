@@ -394,14 +394,14 @@ function ChangeinningPitcher(){
 function ChangebatterPlus(){
 	if (InningTopBottom=="초") {
 		LineupTop[BatterIndexTop]=LineupTop[BatterIndexTop]+1
-		if (LineupTop[BatterIndexTop] > 36 ) {
+		if (LineupTop[BatterIndexTop] > 35 ) {
 			LineupTop[BatterIndexTop]=1
 		}
 
 		document.getElementById("BatterName-text").innerHTML=PlayerName[LineupTop[BatterIndexTop]]
 	} else {
 		LineupBottom[BatterIndexBottom]=LineupBottom[BatterIndexBottom]+1
-		if (LineupBottom[BatterIndexBottom] > 36 ) {
+		if (LineupBottom[BatterIndexBottom] > 35 ) {
 			LineupBottom[BatterIndexBottom]=1
 		}
 		document.getElementById("BatterName-text").innerHTML=PlayerName[LineupBottom[BatterIndexBottom]]
@@ -411,13 +411,13 @@ function ChangebatterMinus(){
 	if (InningTopBottom=="초") {
 		LineupTop[BatterIndexTop]=LineupTop[BatterIndexTop]-1
 		if (LineupTop[BatterIndexTop] < 1 ) {
-			LineupTop[BatterIndexTop]=35
+			LineupTop[BatterIndexTop]=34
 		}
 		document.getElementById("BatterName-text").innerHTML=PlayerName[LineupTop[BatterIndexTop]]
 	} else {
 		LineupBottom[BatterIndexBottom]=LineupBottom[BatterIndexBottom]-1
 		if (LineupBottom[BatterIndexBottom] < 1 ) {
-			LineupBottom[BatterIndexBottom]=35
+			LineupBottom[BatterIndexBottom]=34
 		}
 
 		document.getElementById("BatterName-text").innerHTML=PlayerName[LineupBottom[BatterIndexBottom]]
@@ -426,7 +426,7 @@ function ChangebatterMinus(){
 function ChangePitcherPlus(){
 	if (InningTopBottom=="초") {
 		PitcherIndexTop=PitcherIndexTop+1
-		if (PitcherIndexTop > 36 ) {
+		if (PitcherIndexTop > 35 ) {
 			PitcherIndexTop=1
 		}		
 		document.getElementById("PitcherName-text").innerHTML=PlayerName[PitcherIndexTop]
@@ -434,7 +434,7 @@ function ChangePitcherPlus(){
 		document.getElementById("Pitches-text").innerHTML=PitchingCountTop
 	} else {
 		PitcherIndexBottom=PitcherIndexBottom+1
-		if (PitcherIndexBottom > 36 ) {
+		if (PitcherIndexBottom > 35 ) {
 			PitcherIndexBottom=1
 		}
 		document.getElementById("PitcherName-text").innerHTML=PlayerName[PitcherIndexBottom]
@@ -446,7 +446,7 @@ function ChangePitcherMinus(){
 	if (InningTopBottom=="초") {
 		PitcherIndexTop=PitcherIndexTop-1
 		if (PitcherIndexTop < 1 ) {
-			PitcherIndexTop=35
+			PitcherIndexTop=34
 		}
 		document.getElementById("PitcherName-text").innerHTML=PlayerName[PitcherIndexTop]
 		PitchingCountTop=0
@@ -454,7 +454,7 @@ function ChangePitcherMinus(){
 	} else {
 		PitcherIndexBottom=PitcherIndexBottom-1
 		if (PitcherIndexBottom < 1 ) {
-			PitcherIndexBottom=35
+			PitcherIndexBottom=34
 		}
 		document.getElementById("PitcherName-text").innerHTML=PlayerName[PitcherIndexBottom]
 		PitchingCountBottom=0
