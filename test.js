@@ -1263,7 +1263,7 @@ function Nextbatter(){
 			BatterIndexBottom= 1;
 		}
 		document.getElementById("BatterIndex-text").innerHTML=BatterIndexBottom
-		document.getElementById("BatterName-text").innerHTML=PlayerName[TeamIndexBottom][PlayerIndexTopBatList[BatterIndexBottom]]
+		document.getElementById("BatterName-text").innerHTML=PlayerName[TeamIndexBottom][PlayerIndexBottomBatList[BatterIndexBottom]]
 	}
 }
 
@@ -1283,7 +1283,7 @@ function Lastbatter(){
 			BatterIndexBottom= 9;
 		}
 		document.getElementById("BatterIndex-text").innerHTML=BatterIndexBottom
-		document.getElementById("BatterName-text").innerHTML=PlayerName[TeamIndexBottom][PlayerIndexTopBatList[BatterIndexBottom]]
+		document.getElementById("BatterName-text").innerHTML=PlayerName[TeamIndexBottom][PlayerIndexBottomBatList[BatterIndexBottom]]
 	}
 }
 
