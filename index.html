@@ -21,13 +21,13 @@
 #GameName-text {
 	position: absolute;
 	font-weight: bold;
-	font-size: 49px;
-	color: MidnightBlue;
-	Top: 16px;
+	font-size: 31px;
+	color: white;
+	Top: 17px;
 	left: 61px;
-	Width: 500px;
+	Width: 430px;
 	Height: 88px;
-!	border: 3px solid green;
+	border: 3px solid green;
 	display: flex;
 	justify-content: Left;
 	align-items: center;
@@ -37,13 +37,13 @@
 #GamePlace-text {
 	position: absolute;
 	font-weight: bold;
-	font-size: 41px;
-	color: MidnightBlue;
-	Top: 16px;
-	left: 510px;
-	Width: 290px;
+	font-size: 31px;
+	color: white;
+	Top: 17px;
+	left: 490px;
+	Width: 310px;
 	Height: 88px;
-!	border: 3px solid green;
+	border: 3px solid green;
 	display: flex;
 	justify-content: right;
 	align-items: center;
@@ -435,8 +435,9 @@
 <body>
 	<img id="MainBoard" src="./ScoreBoardBase_away.png"width=865 height=448/>
 
-	<div id="GameName-text"; onclick="ChangebatterMinus();">i-League U16</div>
-	<div id="GamePlace-text"; onclick="Lastbatter();">화성드림</div>
+<!--<div id="GameName-text"; onclick="ChangebatterMinus();">i-League U16</div>-->!	
+	<div id="GameName-text"; onclick="ChangebatterMinus();">중학 친선 경기</div>
+	<div id="GamePlace-text"; onclick="Lastbatter();">화성드림파크</div>
 
 	<div id="BatterIndex-text"; onclick="Nextbatter();">1</div>
 	<div id="BatterName-text"; onclick="ChangebatterPlus();">타자이름</div>
